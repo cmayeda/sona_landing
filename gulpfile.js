@@ -12,19 +12,19 @@ gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
         server: {
-            baseDir: "./opt/bitnami/apps/edx/"
+            baseDir: "./opt/bitnami/apps"
         }
     });
 
-    gulp.watch("themes/rsync/*.scss", ['sass']);
-    gulp.watch("themes/rsync/*.html").on('change', browserSync.reload);
+    gulp.watch("edx/themes/rsync/*.scss", ['sass']);
+    gulp.watch("edx/themes/rsync/*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("themes/rsync/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("themes/stanford/static/css"))
+        .pipe(gulp.dest("edx/themes/stanford/static/css"))
         .pipe(browserSync.stream());
 });
 
