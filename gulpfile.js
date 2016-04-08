@@ -11,7 +11,9 @@ var sass = require('gulp-sass');
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "./opt/bitnami/apps/edx/"
+        server: {
+            baseDir: "./opt/bitnami/apps/edx/"
+        }
     });
 
     gulp.watch("themes/rsync/*.scss", ['sass']);
