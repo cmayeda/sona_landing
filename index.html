@@ -1,135 +1,58 @@
-<!DOCTYPE html>
+/*This file is now initialized in a github repo called sonagulp. If you can't access it, tell Cassidy. 
+All changes should be tracked by git, and pulled to local machines from this master document.*/
 
-<html>
-<head>
+// Currently not compiling correctly, something to do with the way python
+// creates the wesbite dynamically. Ricardo made a few additions, like 
+// additions, like adding paths variable to simplify. And adding a way to 
+// run the python server. More research to be done in exactly how
+// manage.py runserver works.
 
-	<title>Sona</title>
-	<link href="/Users/cassidymayeda/Desktop/Sona/Landing/css/index.css" rel="stylesheet" type="text/css">
-	<link href="/Users/cassidymayeda/Desktop/Sona/Landing/css/navBar.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
-	<div class="container">
-		<div id="banner"> 
-			<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/logos/LogoLg.png">
-		</div> 	
-	</div>
-
-	<div class="container">
-		<div id="pitchBar">
-			<h2>Audio Engineering Education</h2>
-			<p>blurby catch phrase</p>
-		</div>	
-	</div>
-
-	<div class="container">
-		<div id="classes"> 
-	
-			<div>
-				<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/logos/mixOrange.png">
-				<h2>MIXING</h2>
-				<ul>
-					<li>more things</li>
-					<li>music?</li>
-					<li>we like music right</li>
-				</ul>
-			</div>
-			
-			<div> 
-				<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/logos/waveOrange.png">
-				<h2>MASTERING</h2>
-				<ul>
-					<li>things we can say</li>
-					<li>about the courses</li>
-					<li>we should write stuff</li>
-				</ul>
-			</div>
-			<div>
-				<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/logos/cogOrange.png">
-				<h2>PROFESSIONAL</h2>
-				<ul>
-					<li>moooore things</li>
-					<li>a mock 3rd class</li>
-					<li>maybe only 2 classes?</li>
-				</ul>
-			</div>
-
-		</div>
-	</div>
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+var sass = require('gulp-sass');
+var exec = require('child_process').exec;
+var paths = {
+	scripts: ['/opt/bitnami/apps/edx/edx-platform/'],
+	html: ['/opt/bitnami/apps/edx/edxapp/staticfiles/templates/*.html'],
+	css: ['/opt/bitnami/apps/edx/themes/stanford/static/sass'],
+	//The destination folder is incorect, keeps leading somewhere else
+	dist: ['/opt/bitnami/apps/edx/themes/gulp/dist']
+};
 
 
-	<div class="container">
-		<!-- <div id="teachers" style="background-color: rgba(225, 149, 98, 0.8)">  -->
-		<div id="teachers">
-			
-			<h1>Our Teachers</h1>
-
-			<div id="imgGrid">
-				<div class="prs">
-					<div><h3>Ariel Borujow</h3></div>
-					<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/people/Ariel.jpg">
-				</div>
-
-				<div class="prs">
-					<div><h3>Ricardo<br>Gutierrez</h3></div>
-					<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/people/Ricardo.jpg">
-				</div>
+//Initial Serve
+gulp.task('runserver', function() {
+	gulp.src(paths.scripts)
+	.pipe(exec('python manage.py runserver'))
+	.pipe(gulp.dest(paths.dist))
+})
 
 
-				<div class="prs">
-					<div><h3>Matt Arlege</h3></div>
-					<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/people/Matt.jpg">
-				</div>
+// Static Server + watching scss/html files
+gulp.task('serve',['runserver','sass'], function() {
 
-				<div class="prs">
-					<div><h3>Bill Lee</h3></div>
-					<img src="/Users/cassidymayeda/Desktop/Sona/Landing/images/people/Bill.jpg">
-				</div>
-			</div>
+    browserSync.init({
+        server: {
+            baseDir: "./opt/bitnami/apps"
+        }
+    });
 
-		</div>
-	</div>
+    gulp.watch("edx/themes/rsync/*.scss", ['sass']);
+    gulp.watch("edx/themes/rsync/*.html").on('change', browserSync.reload);
+});
 
-	<div class="container">
-		<div id="btn-row">
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("themes/rsync/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest(paths.dist))
+        .pipe(browserSync.stream());
+});
 
-			<div>
-				<p>Look at our unique</p>
-				<h2 class="button"><a href="/Users/cassidymayeda/Desktop/Sona/Landing/files/community.html">COMMUNITY</a></h2>
-			</div>
+gulp.task('default', ['serve']);var gulp = require('gulp');
 
-			<div>
-				<p>Find the perfect</p>
-				<h2 class="button"><a href="classes.html">COURSE</a></h2>
-			</div>
-
-			<div>
-				<p>If you're a partner</p>
-				<h1 class="button"><a href="/Users/cassidymayeda/Desktop/Sona/Landing/files/contact.html">CONTACT US</a></h1>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="container">
-		<div id="blank">
-
-		</div>
-	</div>
-
-	<div class="container">
-		<div id="navBar">
-
-			<div><h3><a href="/Users/cassidymayeda/Desktop/Sona/Landing/files/index.html">HOME</a></h3></div>
-			<div><h3><a href="/Users/cassidymayeda/Desktop/Sona/Landing/files/classes.html">CLASSES</a></h3></div>
-			<div><h3><a href="/Users/cassidymayeda/Desktop/Sona/Landing/files/contact.html">CONTACT</a></h3></div>
-			<div><h3><a href="/Users/cassidymayeda/Desktop/Sona/Landing/files/community.html">COMMUNITY</a></h3></div>
-			<div id="socialMedia">
-
-			</div>
-			
-		</div>
-	</div>
-
-</body>
-</html>
+gulp.task("default", function() { 
+	console.log("gulp configuration default");
+});
+ 
