@@ -1,0 +1,26 @@
+body { 
+	font-family: Heiti SC; 
+}
+
+/*MAIN*/
+
+#main { 
+	text-align: center; 
+	margin-top: 100px;
+}
+
+#main h1 { 
+	color: #C55D29;
+	font-size: 80px;
+	margin-bottom: 40px;
+}
+
+#main p { 
+	width: 550px;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #446E88;
+	line-height: 1.5;
+	padding-bottom: 100px;
+}

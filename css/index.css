@@ -1,0 +1,237 @@
+body { 
+	background-image: url("/Users/cassidymayeda/Desktop/Sona/Landing/images/people/newBannerTop.jpg");
+	background-repeat: no-repeat;
+	background-size: auto; 
+	position: center;
+	background-attachment: scroll;
+	font-family: Rubik; 
+}
+
+img { 
+	width: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 75px;
+}
+
+.container { 
+	display: block;
+	clear: both;
+	position: relative;
+	display: block;
+}
+
+.button { 
+	background-color: #C55D29;
+	position: relative;
+	display: inline-block;
+	border-radius: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 25px;
+	padding-left: 25px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: white;
+	width: 200px;
+	text-align: center;
+	font-size: 25px;
+}
+
+a { 
+	text-decoration: none;
+	color: white;
+}
+
+a:hover { 
+	text-decoration: underline;
+	color: #C55D29;
+}
+
+/*PITCHBAR*/
+
+#pitchBar { 
+	background-color: #162D46;
+	width: 103%;
+	height: 200px;
+	margin-left: -10px;
+	margin-right: -10px;
+	color: #F4F5FA;
+	text-align: center;
+}
+
+#pitchBar h2 { 
+	padding-top: 55px;
+	margin-bottom: 10px;
+	font-size: 40px;
+}
+
+#pitchBar p { 
+	opacity: 0.60;
+	font-size: 25px;
+}
+
+
+
+
+
+/*CLASSES*/
+
+#classes { 
+	background-color: white;
+	height: 10%;
+	padding-right: 15px;
+	text-align: center;
+	color: #C55D29;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-bottom: 3s0px;
+
+	background: #dbdbdb;
+	background: -moz-linear-gradient(top,  #dbdbdb 0%, #ffffff 24%, #ffffff 44%);
+	background: -webkit-linear-gradient(top,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
+	background: linear-gradient(to bottom,  #dbdbdb 0%,#ffffff 24%,#ffffff 44%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=0 );
+
+}
+
+#classes div { 
+	display: inline-block;
+	margin-left: 25px;
+	margin-right: 25px;
+	line-height: 1.8;
+}
+
+#classes img { 
+	margin-top: 75px;
+	margin-bottom: 25px;
+	width: 175px;
+	height: 174px;
+}
+
+#classes ul { 
+	text-align: left;
+	list-style: none;
+}
+
+
+
+
+/*TEACHERS*/
+
+#teachers { 
+	text-align: center;
+	color: #162D46;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#teachers h1 { 
+	font-size: 45px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.prs { 
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#teachers img { 
+	margin: 0;
+	padding: 0;
+	display: block;
+	height: 300px;
+	width: auto;
+	border-radius: 7px;
+	opacity: 1;
+    transition: width .5s, height .5s, opacity .5s;
+    display: inline-block;
+}
+
+#imgGrid:hover img { 
+	opacity: 0.7;
+}
+
+#teachers img:hover { 
+	height: 400px;
+	width: auto;
+	opacity: 1;
+}
+
+#teachers h3 { 
+	display: none;
+	font-size: 35px;
+	color: #C55D29;
+	position: absolute;
+	z-index: 100;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+
+/* -- NAME H3'S NOT WORKING -- */
+.prs div { 
+	transition: color .5s, display .5s;
+}
+
+#teachers img:hover div { 
+	display: initial;
+	color: white;
+
+}
+
+
+
+/*BUTTON ROW*/
+
+#btn-row { 
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+#btn-row p { 
+	font-size: 18px;
+
+}
+
+#btn-row div { 
+	display: inline-block;
+	position: relative;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#btn-row a:hover { 
+	color: #162D46;
+}
+
+
+
+
+
+
+
+
+/*BLANK*/
+
+#blank { 
+	height: 200px;
+	background-image: url('/Users/cassidymayeda/Desktop/Sona/Landing/images/people/newBannerBottom.jpg');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: auto;
+	margin-left: -10px;
+	margin-right: -19px
+}
+
+
+
+
+
+
+

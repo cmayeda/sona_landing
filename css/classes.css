@@ -1,0 +1,191 @@
+body { 
+	font-family: Heiti SC;
+	font-size: 20px;
+}
+
+/*BANNER*/
+
+#banner { 
+	background-color: #446E88;
+	color: white;
+	margin-top: -55px;
+	margin-right: -10px;
+	margin-left:-10px;
+	text-align: center;
+}
+
+#banner h1 { 
+	font-size: 80px;
+	padding-top: 60px;
+}
+
+#banner p { 
+	width: 550px;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -30px;
+	padding-bottom: 50px;
+	opacity: 0.75;
+
+}
+
+/*MIXING CLASSES*/
+
+#mixing { 
+	display: block;
+	color: #C55D29;
+}
+
+#mixing div { 
+	display: inline-block;
+}
+	/*LEFT MIX COLUMN*/
+#leftMix { 
+	text-align: center;
+	width: 30%;
+}
+
+#mixLogo { 
+	width: 150px;
+}
+
+#leftMix h3 { 
+	color: #C55D29;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+#leftMix h4 { 
+	color: #C55D29;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+#ariel { 
+	width: 150px;
+	border-radius: 50%;
+}
+
+	/*RIGHT MIX COLUMN*/
+
+#rightMix { 
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+#rightMix h2 { 
+	font-size: 60px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#topMaster { 
+	margin-top: 50px;
+}
+
+#rightMix .row { 
+	display: block;
+	height: 100px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+}
+
+#rightMix .column-t { 
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 40px;
+	vertical-align: top;
+	opacity: 0.8;
+}
+
+#rightMix .column { 
+	display: inline-block;
+}
+
+#rightMix li { 
+	opacity: 0.8;
+}
+
+
+
+/*MASTERING CLASSES*/
+#mastering { 
+	display: block;
+	color: #162D46;
+	background-color: #E19562; 
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+#mastering div { 
+	display: inline-block;
+}
+	/*LEFT MAS COLUMN*/
+#leftMas { 
+	text-align: center;
+	width: 30%;
+}
+
+#masLogo { 
+	width: 150px;
+}
+
+#leftMas h3 { 
+	color: #162D46;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+#leftMas h4 { 
+	color: #162D46;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+#ricardo { 
+	width: 150px;
+	border-radius: 50%;
+}
+
+	/*RIGHT MAS COLUMN*/
+
+#rightMas { 
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+#rightMas h2 { 
+	font-size: 55px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#rightMas .row { 
+	display: block;
+	height: 100px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+}
+
+#rightMas .column-t { 
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 40px;
+	vertical-align: top;
+	opacity: 0.8;
+}
+
+#rightMas .column { 
+	display: inline-block;
+}
+
+#rightMas li { 
+	opacity: 0.8;
+}
+
+
