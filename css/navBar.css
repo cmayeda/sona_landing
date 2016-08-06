@@ -44,7 +44,7 @@
 /*NAVBAR*/
 
 #navBar { 
-	height: 360px;
+	height: 200px;
 	margin-left: -10px;
 	margin-right: -20px;
 	padding-left: 20px;
@@ -57,7 +57,6 @@
 	color: white;
 	text-decoration: none;
 	opacity: 0.50;
-
 }
 
 #navBar a:hover { 
@@ -66,7 +65,14 @@
 
 #navBar div { 
 	display: inline-block;
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-right: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
 	float: left;
 }
+
+
+
+
